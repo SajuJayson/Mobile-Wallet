@@ -11,4 +11,9 @@ public partial class ConfirmationForm : System.Web.UI.Page
     {
 
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AcknowledgementForm.aspx");
+    }
 }
