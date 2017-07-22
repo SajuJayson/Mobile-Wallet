@@ -13,6 +13,6 @@
     <asp:Label ID="Label3" runat="server" Text="Amount"></asp:Label>
     <asp:TextBox ID="TextBox3" runat="server" Width="166px"></asp:TextBox>
     <br/>
-    <asp:Button ID="Button1" runat="server" Text="Send" />
+    <asp:Button ID="Button1" runat="server" Text="Send" OnClick="Button1_Click" />
 </asp:Content>
 
