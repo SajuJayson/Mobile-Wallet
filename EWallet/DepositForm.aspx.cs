@@ -16,4 +16,9 @@ public partial class DepositForm : System.Web.UI.Page
     {
         Response.Redirect("ConfirmationForm.aspx");
     }
+
+    protected void BtnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("DepositForm.aspx");
+    }
 }
