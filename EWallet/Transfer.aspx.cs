@@ -11,15 +11,22 @@ public partial class Transfer : System.Web.UI.Page
     {
 
     }
-
-
-
-
-
-
-
     protected void BtbSend_Click(object sender, EventArgs e)
     {
+        eWalletEntities dbcontext = new eWalletEntities();
+        //context.TableName.AddObject(TableEntityInstance);
+        using (var db = new EfContext("name=EfSample"))
+        {
+            var customers = db.Set<Customer>();
+            customers.Add(new Customer { CustomerId = id, Name = "John Doe" });
+
+            db.SaveChanges();
+        }
         Response.Redirect("ConfirmationForm.aspx");
+    }    
+    protected void RBtnChange(object sender, EventArgs e)
+    {
+        
     }
+
 }
