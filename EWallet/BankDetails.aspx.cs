@@ -11,4 +11,14 @@ public partial class BankDetails : System.Web.UI.Page
     {
 
     }
+
+    protected void BtnNextWithdraw_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ConfirmationForm.aspx");
+    }
+
+    protected void BtnBackWithdraw_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
 }

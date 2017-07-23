@@ -19,6 +19,11 @@ public partial class _Default : Page
 
     protected void BtnDeposit_Click(object sender, EventArgs e)
     {
+        Response.Redirect("DepositForm.aspx");
+    }
+
+    protected void BtnWithdraw_Click(object sender, EventArgs e)
+    {
         Response.Redirect("BankDetails.aspx");
     }
 }

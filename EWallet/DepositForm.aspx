@@ -19,11 +19,16 @@
 
      <asp:Label ID="Label5" runat="server" Text="Amount"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="TxtBoxAmount" runat="server"></asp:TextBox><br/>
+    <asp:TextBox ID="TxtBoxAmount" runat="server"></asp:TextBox>
+    <br />
+    <br />
+    <br/>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <asp:Button ID="BtnConfirmDeposit" runat="server" Text="Confirm" Height="32px" OnClick="BtnConfirmDeposit_Click" Width="83px" />
+    <asp:Button ID="BtnNext" runat="server" Text="Next" Height="32px" OnClick="BtnConfirmDeposit_Click" Width="83px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="BtnBack" runat="server" Height="30px" OnClick="BtnBack_Click" Text="Back" Width="74px" />
     <br />
     <br />
     <br />
