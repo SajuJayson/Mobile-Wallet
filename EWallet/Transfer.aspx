@@ -21,7 +21,7 @@
             </td>
             <tr>
             <td>
-                <asp:Label runat="server" ID="lblbal" Text="Phone Number"></asp:Label>
+                <asp:Label runat="server" ID="lblbal" Text="Balance"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtbal" runat="server"></asp:TextBox>
@@ -29,6 +29,6 @@
         </tr>
         </tr>
     </table>
-    <asp:Button ID="BtnSend" runat="server" Text="Send" OnClick="BtbSend_Click" />    
+    <asp:Button ID="BtnSend" runat="server" Text="Send" OnClick="BtbSend_Click" />   <asp:Label ID="lblMes" runat="server"  ForeColor="Red" />
 </asp:Content>
 
