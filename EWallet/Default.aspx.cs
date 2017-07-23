@@ -16,4 +16,9 @@ public partial class _Default : Page
     {
         Response.Redirect("Transfer.aspx");
     }
+
+    protected void BtnDeposit_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("BankDetails.aspx");
+    }
 }

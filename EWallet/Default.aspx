@@ -15,7 +15,7 @@
         <p>
             <asp:Button ID="BtnTransfer" runat="server" Text="Transfer " OnClick="BtnTransfer_Click" /></p>
         <p>&nbsp;</p>
-          <p><asp:Button ID="BtnDeposit" runat="server" Text="Deposit " /></p>
+          <p><asp:Button ID="BtnDeposit" runat="server" Text="Deposit " OnClick="BtnDeposit_Click" /></p>
         <p>&nbsp;</p>
           <p><asp:Button ID="BtnWithdraw" runat="server" Text="Withdraw" /></p>
     </div>
