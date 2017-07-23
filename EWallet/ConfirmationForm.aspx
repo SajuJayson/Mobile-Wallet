@@ -3,6 +3,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <br/>
     <br/>
+<<<<<<< HEAD
+    <table><tr><td>
+    <asp:Label ID="Label2" runat="server" Text="Your Current Balance is: "></asp:Label>
+    </td><td>
+    <asp:Label ID="LabelCurrentBalance" runat="server" Text=""></asp:Label><br/><br/>
+    </td></tr><tr><td>
+    <asp:Label ID="Label1" runat="server" Text="Amount deducted is: "></asp:Label>
+    </td><td>
+        <asp:Label ID="LabelAmountDeducted" runat="server" Text=" "></asp:Label><br/><br/>
+    </td></tr><tr><td>
+        <asp:Label ID="Label3" runat="server" Text="Your updated balance is: "></asp:Label>
+        </td><td>
+    <asp:Label ID="LabelUpdatedBalance" runat="server" Text=" "></asp:Label><br/><br/>
+        </td></tr><tr><td></table>
+=======
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -21,6 +36,7 @@
     <br />
     <br/><br/>
     &nbsp;&nbsp;
+>>>>>>> 9edb1160b7f709923102c48dcf90575f12632dc5
     <asp:Button ID="BtnConfirm" runat="server" Text="Confirm" OnClick="Button1_Click" />
      <asp:Button ID="BtnBackConfirmForm" runat="server" Text="Back" OnClick="Button1_Click" />
     <br />

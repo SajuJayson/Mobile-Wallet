@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+EWallet/App_Data/eWallet.mdf
+EWallet/App_Data/eWallet.mdf
+EWallet/ConfirmationForm.aspx
+EWallet/App_Data/eWallet_Log.ldf

@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="eWalletModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="eWalletModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AccountInfo">
           <Key>
-            <PropertyRef Name="Email" />
+            <PropertyRef Name="customerid" />
           </Key>
-          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="customerid" Type="int" Nullable="false" />
           <Property Name="Balance" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="CustomerInfo">
@@ -21,6 +21,8 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="AccountNo" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="RollID" Type="int" />
         </EntityType>
         <EntityType Name="Login">
           <Key>
@@ -40,9 +42,6 @@
           <Property Name="TransactionTime" Type="datetime" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK_AccountInfo_CustomerInfo' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK_AccountInfo_CustomerInfo" />-->
         <!--Errors Found During Generation:
 warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
         <Association Name="FK_Login_CustomerInfo" />-->
@@ -68,18 +67,10 @@ warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not 
             <End Role="transaction" EntitySet="transaction" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="eWalletModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="AccountInfo">
-          <Key>
-            <PropertyRef Name="Email" />
-          </Key>
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="CustomerInfo">
           <Key>
             <PropertyRef Name="CustomerID" />
@@ -90,6 +81,8 @@ warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not 
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="AccountNo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="transactions" Relationship="Self.FK_Transaction_CustomerInfo" FromRole="CustomerInfo" ToRole="transaction" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RollID" Type="Int32" />
         </EntityType>
         <EntityType Name="Login">
           <Key>
@@ -123,7 +116,6 @@ warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not 
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="eWalletEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AccountInfoes" EntityType="Self.AccountInfo" />
           <EntitySet Name="CustomerInfoes" EntityType="Self.CustomerInfo" />
           <EntitySet Name="Logins" EntityType="Self.Login" />
           <EntitySet Name="transactions" EntityType="Self.transaction" />
@@ -131,24 +123,26 @@ warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not 
             <End Role="CustomerInfo" EntitySet="CustomerInfoes" />
             <End Role="transaction" EntitySet="transactions" />
           </AssociationSet>
+          <EntitySet Name="AccountInfoes" EntityType="eWalletModel1.AccountInfo" />
         </EntityContainer>
+        <EntityType Name="AccountInfo">
+          <Key>
+            <PropertyRef Name="customerid" />
+          </Key>
+          <Property Name="customerid" Type="Int32" Nullable="false" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="eWalletModel1StoreContainer" CdmEntityContainer="eWalletEntities1">
-          <EntitySetMapping Name="AccountInfoes">
-            <EntityTypeMapping TypeName="eWalletModel1.AccountInfo">
-              <MappingFragment StoreEntitySet="AccountInfo">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Balance" ColumnName="Balance" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CustomerInfoes">
             <EntityTypeMapping TypeName="eWalletModel1.CustomerInfo">
               <MappingFragment StoreEntitySet="CustomerInfo">
+                <ScalarProperty Name="RollID" ColumnName="RollID" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -174,6 +168,14 @@ warning 6035: The relationship 'FK_Login_CustomerInfo' has columns that are not 
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="TransactionTime" ColumnName="TransactionTime" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccountInfoes">
+            <EntityTypeMapping TypeName="eWalletModel1.AccountInfo">
+              <MappingFragment StoreEntitySet="AccountInfo">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="customerid" ColumnName="customerid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

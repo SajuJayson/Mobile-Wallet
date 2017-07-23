@@ -23,8 +23,8 @@ public partial class eWalletEntities1 : DbContext
         throw new UnintentionalCodeFirstException();
     }
 
-    public virtual DbSet<AccountInfo> AccountInfoes { get; set; }
     public virtual DbSet<CustomerInfo> CustomerInfoes { get; set; }
     public virtual DbSet<Login> Logins { get; set; }
     public virtual DbSet<transaction> transactions { get; set; }
+    public virtual DbSet<AccountInfo> AccountInfoes { get; set; }
 }

@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 public partial class AccountInfo
 {
-    public string Email { get; set; }
+    public int customerid { get; set; }
     public Nullable<decimal> Balance { get; set; }
 }
 
@@ -29,6 +29,8 @@ public partial class CustomerInfo
     public string LastName { get; set; }
     public string Email { get; set; }
     public int AccountNo { get; set; }
+    public string Phone { get; set; }
+    public Nullable<int> RollID { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<transaction> transactions { get; set; }
