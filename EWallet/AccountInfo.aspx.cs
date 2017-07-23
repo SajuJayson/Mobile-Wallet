@@ -11,4 +11,11 @@ public partial class AccountInfo : System.Web.UI.Page
     {
 
     }
+
+   
+
+    protected void BtnTransactionHistory_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("TransactionHistory.aspx");
+    }
 }
