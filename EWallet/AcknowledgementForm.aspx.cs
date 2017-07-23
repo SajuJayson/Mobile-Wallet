@@ -14,6 +14,6 @@ public partial class AcknowledgementForm : System.Web.UI.Page
 
     protected void BtnBack_Click(object sender, EventArgs e)
     {
-        Response.Redirect("ConfirmationForm.aspx");
+        Response.Redirect("Default.aspx");
     }
 }
