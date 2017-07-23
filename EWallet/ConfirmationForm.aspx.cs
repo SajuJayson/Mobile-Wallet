@@ -5,12 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class ConfirmationForm : System.Web.UI.Page
-{
 
-   // eWalletEntities dbcontext = new eWalletEntities();
+public partial class ConfirmationForm : System.Web.UI.Page
+{    
+    eWalletEntities1 dbcontext = new eWalletEntities1();
     protected void Page_Load(object sender, EventArgs e)
     {
+        
       //  LabelCurrentBalance.Text = "You are a Billionaire";
       //  LabelUpdatedBalance.Text= dbcontext.AccountInfoes.ToList().ToString();
     }
