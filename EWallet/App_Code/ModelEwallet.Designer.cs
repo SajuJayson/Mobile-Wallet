@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// T4 code generation is enabled for model 'C:\Users\lenovo\Documents\GitHub\Mobile-Wallet\EWallet\App_Code\ModelEwallet.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\ACER\Documents\GitHub\Mobile-Wallet\EWallet\App_Code\ModelEwallet.edmx'. 
+>>>>>>> e1c89180aa817872cf4ddce2501d54ab8af4960a
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -13,7 +13,7 @@
         <%--<h1>ASP.NET</h1>--%>
         <%--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>--%>
         <p>
-            <asp:Button ID="BtnTransfer" runat="server" Text="Transfer " /></p>
+            <asp:Button ID="BtnTransfer" runat="server" Text="Transfer " OnClick="BtnTransfer_Click" /></p>
         <p>&nbsp;</p>
           <p><asp:Button ID="BtnDeposit" runat="server" Text="Deposit " /></p>
         <p>&nbsp;</p>

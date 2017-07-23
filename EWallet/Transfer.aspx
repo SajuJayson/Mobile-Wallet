@@ -4,15 +4,17 @@
     <br />
     <br />
     <br />
-    <asp:Label ID="Label1" runat="server" Text="Mobile Number"></asp:Label>
+    <asp:RadioButton ID="RbtnMobileNo" runat="server" Text="Mobile Number" />
     <asp:TextBox ID="TextBox1" runat="server" Width="166px"></asp:TextBox>
     <br/>
-    <asp:Label ID="Label2" runat="server" Text="E-Mail Id"></asp:Label>
+    <asp:RadioButton ID="RBtnEmailId" runat="server" Text="Email-ID" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBox2" runat="server" Width="166px"></asp:TextBox>
     <br/>
-    <asp:Label ID="Label3" runat="server" Text="Amount"></asp:Label>
+    <asp:Label ID="LAmount" runat="server" Text="Amount"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBox3" runat="server" Width="166px"></asp:TextBox>
     <br/>
-    <asp:Button ID="Button1" runat="server" Text="Send" OnClick="Button1_Click" />
+    <asp:Button ID="BtnSend" runat="server" Text="Send" OnClick="BtbSend_Click" />
 </asp:Content>
 
