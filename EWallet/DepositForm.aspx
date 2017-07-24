@@ -11,8 +11,10 @@
 
      <asp:Label ID="Label3" runat="server" Text="Expiry Date"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="TxtBoxExDate" runat="server"></asp:TextBox><br/>
-
+    <asp:TextBox ID="TxtBoxExDate" runat="server"></asp:TextBox>
+    <asp:ImageButton ID="ImageButton1" runat="server" Height="22px" ImageUrl="~/image/Calimages.jpg" OnClick="ImageButton1_Click" Width="49px" />
+    <asp:Calendar ID="Calendar1" runat="server" Height="16px" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
+    <br/>
      <asp:Label ID="Label4" runat="server" Text="CVV"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TxtBoxCCV" runat="server"></asp:TextBox><br/>
