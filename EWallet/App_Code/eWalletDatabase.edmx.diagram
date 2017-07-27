@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="a3ff398c5ba44c36b5b95398ca79e638" Name="Diagram1">
         <EntityTypeShape EntityType="eWalletModel1.CustomerInfo" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="eWalletModel1.Login" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eWalletModel1.Login" Width="1.5" PointX="5.375" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="eWalletModel1.transaction" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="eWalletModel1.FK_Transaction_CustomerInfo" ManuallyRouted="false" />
         <EntityTypeShape EntityType="eWalletModel1.AccountInfo" Width="1.5" PointX="5.375" PointY="0.75" />

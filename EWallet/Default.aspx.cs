@@ -9,6 +9,8 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["userType"] == "1")
+        { }
 
     }
 
@@ -25,5 +27,10 @@ public partial class _Default : Page
     protected void BtnWithdraw_Click(object sender, EventArgs e)
     {
         Response.Redirect("BankDetails.aspx");
+    }
+
+    protected void BtnReport_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Report.aspx");
     }
 }

@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    &nbsp;<div class="jumbotron">
+    lo&nbsp;<div class="jumbotron">
         <h1>EWALLET</h1>
         <%--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>--%>
         <%--<p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>--%>
@@ -18,6 +18,8 @@
           <p><asp:Button ID="BtnDeposit" runat="server" Text="Deposit " OnClick="BtnDeposit_Click" /></p>
         <p>&nbsp;</p>
           <p><asp:Button ID="BtnWithdraw" runat="server" Text="Withdraw" OnClick="BtnWithdraw_Click" /></p>
+        <p>&nbsp;</p>
+        <p><asp:Button ID="BtnReport" runat="server" Text="Report" OnClick="BtnReport_Click" Width="132px" /></p>
     </div>
 
 </asp:Content>
