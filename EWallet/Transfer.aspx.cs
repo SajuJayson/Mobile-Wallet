@@ -11,11 +11,12 @@ public partial class Transfer : System.Web.UI.Page
 {
     DataBaseHandler cls = new DataBaseHandler();
     DataSet ds = new DataSet();
+    DataSet ds1 = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-    Regex reg= new Regex(@"\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*");
+    Regex reg = new Regex(@"\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*");
     protected void BtbSend_Click(object sender, EventArgs e)
     {
 
@@ -25,25 +26,38 @@ public partial class Transfer : System.Web.UI.Page
         }
         else
         {
-            ds=cls.UserDetails(txtphonemail.Text, Convert.ToInt16( RbtnType.SelectedValue));
-            string balance = ds.Tables[0].Rows[0]["Balance"].ToString();
-            string CustID = ds.Tables[0].Rows[0]["CustomerID"].ToString();
-            
-            if(ds== null)
-                lblMes.Text = "Phone/Email Number not found";
-            else if ( Convert.ToInt16(balance) < Convert.ToInt16(txtbal.Text))
+            ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt16(RbtnType.SelectedValue));
+            ds = cls.UserDetails("6475289869", 1);
+            if (ds1 == null)
             {
-                lblMes.Text = "Oops! Not enough balance!";
+                lblMes.Text = "Phone/Email Number not registered./nPlease enter a registered Phone no/Email Id";
+            }
+            else if (txtbal.Text.Equals(""))
+            {
+                lblMes.Text = "Please enter an amount";
+
             }
             else
+            {
+                string balance = ds.Tables[0].Rows[0]["Balance"].ToString();
+                string CustID = ds1.Tables[0].Rows[0]["CustomerID"].ToString();
+            
+         
+             if (Convert.ToInt16(balance) < Convert.ToInt16(txtbal.Text))
                 {
-                    string updatedAmt = Convert.ToString( Convert.ToInt64(balance) - Convert.ToInt64(txtbal.Text));
-                    Response.Redirect("ConfirmationForm.aspx?CustID=" + CustID + "&CurBal=" + balance+"&DeductedAmt="+ txtbal.Text+ "&updatedAmt="+ updatedAmt);
+                    lblMes.Text = "Insufficient Balance";
+                }
+                else
+                {
+                    string updatedAmt = Convert.ToString(Convert.ToInt64(balance) - Convert.ToInt64(txtbal.Text));
+                    Response.Redirect("ConfirmationForm.aspx?CustID=" + CustID + "&CurBal=" + balance + "&DeductedAmt=" + txtbal.Text + "&updatedAmt=" + updatedAmt);
                 }
             }
-        
 
-    }    
+        }
+
+
+    }
     protected void RBtnChange(object sender, EventArgs e)
     {
         if (RbtnType.SelectedValue == "2")

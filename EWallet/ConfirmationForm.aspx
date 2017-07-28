@@ -18,7 +18,7 @@
         </td></tr><tr><td></table>
 
     <asp:Button ID="BtnConfirm" runat="server" Text="Confirm" OnClick="Button1_Click" />
-     <asp:Button ID="BtnBackConfirmForm" runat="server" Text="Back" OnClick="Button1_Click" />
+     <asp:Button ID="BtnBackConfirmForm" runat="server" Text="Back" OnClick="BtnConfirm_Click" />
     <br />
     <br />
     <br />
