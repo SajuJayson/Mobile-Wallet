@@ -19,7 +19,7 @@
         <p>&nbsp;</p>
           <p><asp:Button ID="BtnWithdraw" runat="server" Text="Withdraw" OnClick="BtnWithdraw_Click" /></p>
         <p>&nbsp;</p>
-        <p><asp:Button ID="BtnReport" runat="server" Text="Report" OnClick="BtnReport_Click" Width="132px" /></p>
+        <p><asp:Button ID="BtnReport" runat="server" Text="Report" OnClick="BtnReport_Click" Width="126px" /></p>
     </div>
 
 </asp:Content>
