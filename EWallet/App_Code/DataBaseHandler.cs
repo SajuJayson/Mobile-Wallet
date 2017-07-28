@@ -55,6 +55,17 @@ public class DataBaseHandler
         return ds;
     }
 
+    public DataSet checkUserId(int customerid)
+    {
+        SqlCommand cmd = new SqlCommand("GetUserIDDetails", conn);
+        cmd.Parameters.Add("@BenificaryID", SqlDbType.Int, 100).Value = customerid;
+            cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+
     public DataSet CheckUser(string name, string password)
     {
         SqlCommand cmd = new SqlCommand("CheckUser", conn);

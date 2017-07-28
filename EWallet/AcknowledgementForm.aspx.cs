@@ -9,31 +9,17 @@ public partial class AcknowledgementForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //eWalletEntities1 dbContext = new eWalletEntities1();
-        //AccountInfo Acc = new AccountInfo();
-        //CustomerInfo Cus = new CustomerInfo();
-        //Acc.Balance= Convert.ToDecimal ( Request.QueryString["RemBal"]);
-        //Acc.customerid= Convert.ToInt16(Request.QueryString["CustID"]);
 
-        //using (var Test = new eWalletEntities1())
-        //{
-        //    // Mark entity as modified
-        //    //dbContext.Entry(Acc).State = System.Data.Entity.EntityState.Modified;
+        if (Request.QueryString["Status"].Equals("Fail"))
+        {
+            LabelAcknowledgement.Text = "Transcation unSuccessful!";
 
-        //    // Save changes to database
-        //    //dbContext.SaveChanges();
-        //}
-        LabelAcknowledgement.Text = "Transcation Successful!";
+        }
+        else
+        {
+            LabelAcknowledgement.Text = "Transcation Successful!";
 
-        //var query = from a in dbContext.CustomerInfoes
-        //            join b in dbContext.AccountInfoes on a.CustomerID equals b.customerid
-        //            where a.CustomerID == Convert.ToInt16(Request.QueryString["CustID"])
-        //            select new { custID = a.CustomerID, AccNo = a.AccountNo, Email = a.Email, Bal = b.Balance };
-        //foreach (var item in query)
-        //{
-        //    . = item.Bal.ToString();
-        //    CustID = item.custID.ToString();
-        //}
+        }
 
     }
 

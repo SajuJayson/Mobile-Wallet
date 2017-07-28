@@ -29,8 +29,13 @@
         <asp:Button ID="BtnCheckHistory" runat="server" OnClick="BtnCheckHistory_Click" Text="Check Transaction History" />
     </p>
     <br/>--%>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="BtnTransactionHistory" runat="server" Text="Check Transaction History" OnClick="BtnTransactionHistory_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelOutput" runat="server"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="BtnTransactionHistory" runat="server" Text="Transaction Report" OnClick="BtnTransactionHistory_Click" />
+    <br />
+    <asp:Label ID="Label1" runat="server" Text="Enter a Customer Id"></asp:Label>
+    <asp:TextBox ID="TextBoxCId" runat="server"></asp:TextBox>
+    <asp:Button ID="Button1" runat="server" Text="Observe a Customer" OnClick="Button1_Click1" />
     <br />
     <br />
     <br />
