@@ -46,8 +46,20 @@ public class DataBaseHandler
     public DataSet ShowTransactions(int roll, int customerid)
     {
         SqlCommand cmd = new SqlCommand("GetReport", conn);
-        cmd.Parameters.Add("@roll", SqlDbType.Int, 100).Value = roll;
+        cmd.Parameters.Add("@RollID", SqlDbType.Int, 100).Value = roll;
         cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 100).Value = customerid;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+
+    public DataSet CheckUser(string name, string password)
+    {
+        SqlCommand cmd = new SqlCommand("CheckUser", conn);
+        cmd.Parameters.Add("@name", SqlDbType.VarChar, 100).Value = name;
+        cmd.Parameters.Add("@password", SqlDbType.VarChar, 100).Value = password;
         cmd.CommandType = CommandType.StoredProcedure;
         SqlDataAdapter adp = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();

@@ -12,8 +12,10 @@ public partial class Report : System.Web.UI.Page
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
-        ds=cls.ShowTransactions(1,Convert.ToInt16(Session["Userid"]));
+        Session["Userid"] = "1003";
+        ds =cls.ShowTransactions(1,Convert.ToInt16(Session["Userid"]));
         GridView1.DataSource = ds;
+        GridView1.DataBind();
     }
 
     

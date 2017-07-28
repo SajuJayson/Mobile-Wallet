@@ -4,6 +4,7 @@ using System;
 using System.Web;
 using System.Web.UI;
 using EWallet;
+using System.Data;
 
 public partial class Account_Login : Page
 {
@@ -22,13 +23,12 @@ public partial class Account_Login : Page
         {
             if (IsValid)
             {
-                // Validate the user password
-                var manager = new UserManager();
-                ApplicationUser user = manager.Find(UserName.Text, Password.Text);
-                if (user != null)
+            DataSet ds = new DataSet();
+            DataBaseHandler cls = new DataBaseHandler();
+            ds=cls.CheckUser(UserName.Text, Password.Text);
+                if (ds != null)
                 {
-                    IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    Response.Redirect("Default.aspx");
                 }
                 else
                 {
