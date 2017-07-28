@@ -9,7 +9,7 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Session["Userid"] = "1003";
     }
 
     protected void BtnTransfer_Click(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -8,6 +9,8 @@ using System.Web.UI.WebControls;
 
 public partial class Transfer : System.Web.UI.Page
 {
+    DataBaseHandler cls = new DataBaseHandler();
+    DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -22,37 +25,11 @@ public partial class Transfer : System.Web.UI.Page
         }
         else
         {
-        eWalletEntities1 dbcontext = new eWalletEntities1();
-        CustomerInfo Customer =  new CustomerInfo();
-        using (var dbContext = new eWalletEntities1())
-        {
-            string balance="";
-                string CustID = "";
-            if (RbtnType.SelectedValue == "1")
-            {
-                var query = from a in dbContext.CustomerInfoes
-                join b in dbContext.AccountInfoes on a.CustomerID equals b.customerid
-                where a.Phone == txtphonemail.Text
-                select new { custID = a.CustomerID, Bal = b.Balance };
-                foreach (var item in query)
-                    {
-                        balance = item.Bal.ToString();
-                        CustID = item.custID.ToString();
-                    }
-                }
-            else
-            {
-                var query = from a in dbContext.CustomerInfoes
-                join b in dbContext.AccountInfoes on a.CustomerID equals b.customerid
-                where a.Email == txtphonemail.Text
-                select new { custID = a.CustomerID, Bal = b.Balance };
-                    foreach (var item in query)
-                    {
-                        balance = item.Bal.ToString();
-                        CustID = item.custID.ToString();
-                    }
-            }     
-            if(balance=="")
+            ds=cls.UserDetails(txtphonemail.Text, Convert.ToInt16( RbtnType.SelectedValue));
+            string balance = ds.Tables[0].Rows[0]["Balance"].ToString();
+            string CustID = ds.Tables[0].Rows[0]["CustomerID"].ToString();
+            
+            if(ds== null)
                 lblMes.Text = "Phone/Email Number not found";
             else if ( Convert.ToInt16(balance) < Convert.ToInt16(txtbal.Text))
             {
@@ -61,10 +38,10 @@ public partial class Transfer : System.Web.UI.Page
             else
                 {
                     string updatedAmt = Convert.ToString( Convert.ToInt64(balance) - Convert.ToInt64(txtbal.Text));
-                    Response.Redirect("ConfirmationForm.aspx?CustID="+ CustID + "&CurBal=" + balance+"&DeductedAmt="+ txtbal.Text+ "&updatedAmt="+ updatedAmt);
+                    Response.Redirect("ConfirmationForm.aspx?CustID=" + CustID + "&CurBal=" + balance+"&DeductedAmt="+ txtbal.Text+ "&updatedAmt="+ updatedAmt);
                 }
             }
-        }
+        
 
     }    
     protected void RBtnChange(object sender, EventArgs e)

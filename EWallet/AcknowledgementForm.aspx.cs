@@ -9,20 +9,20 @@ public partial class AcknowledgementForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        eWalletEntities1 dbContext = new eWalletEntities1();
-        AccountInfo Acc = new AccountInfo();
-        CustomerInfo Cus = new CustomerInfo();
-        Acc.Balance= Convert.ToDecimal ( Request.QueryString["RemBal"]);
-        Acc.customerid= Convert.ToInt16(Request.QueryString["CustID"]);
+        //eWalletEntities1 dbContext = new eWalletEntities1();
+        //AccountInfo Acc = new AccountInfo();
+        //CustomerInfo Cus = new CustomerInfo();
+        //Acc.Balance= Convert.ToDecimal ( Request.QueryString["RemBal"]);
+        //Acc.customerid= Convert.ToInt16(Request.QueryString["CustID"]);
 
-        using (var Test = new eWalletEntities1())
-        {
-            // Mark entity as modified
-            dbContext.Entry(Acc).State = System.Data.Entity.EntityState.Modified;
+        //using (var Test = new eWalletEntities1())
+        //{
+        //    // Mark entity as modified
+        //    //dbContext.Entry(Acc).State = System.Data.Entity.EntityState.Modified;
 
-            // Save changes to database
-            dbContext.SaveChanges();
-        }
+        //    // Save changes to database
+        //    //dbContext.SaveChanges();
+        //}
         LabelAcknowledgement.Text = "Transcation Successful!";
 
         //var query = from a in dbContext.CustomerInfoes
