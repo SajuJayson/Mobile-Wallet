@@ -10,7 +10,15 @@ public partial class AccountInfo : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        ds = cls.UserDetails("6475289869", 1);
+        LabelCustomerId.Text = ds.Tables[0].Rows[0]["CustomerID"].ToString();
+        LabelFirstName.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
+        LabelLastName.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
+        LabelEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+        LabelAccountNo.Text = ds.Tables[0].Rows[0]["AccountNo"].ToString();
+        LabelPhoneNo.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
+        LabelRollID.Text = ds.Tables[0].Rows[0]["Balance"].ToString();
+//string CustID = ds1.Tables[0].Rows[0]["CustomerID"].ToString();
     }
 
    

@@ -12,6 +12,10 @@ public partial class Report : System.Web.UI.Page
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+            ViewState["RefUrl"] = Request.UrlReferrer.ToString();
+        }
         int Flag = Convert.ToInt32(Request.QueryString["Flag"]) ;
         
         if (Flag == 2)
@@ -39,6 +43,8 @@ public partial class Report : System.Web.UI.Page
 
     protected void BtnReportBack_Click1(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        object refUrl = ViewState["RefUrl"];
+        if (refUrl != null)
+            Response.Redirect((string)refUrl);
     }
 }
