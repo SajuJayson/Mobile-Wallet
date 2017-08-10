@@ -15,6 +15,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
 =======
 >>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
         <%--<h1>ASP.NET</h1>--%>
@@ -31,10 +34,13 @@
 =======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
+=======
+>>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
 =======
 >>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
         <table><tr>
@@ -47,8 +53,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
+=======
+>>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
 =======
