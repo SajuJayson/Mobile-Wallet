@@ -13,6 +13,9 @@ public partial class _Default : Page
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
         if (Session["userType"] == "1")
         { }
 
@@ -22,12 +25,15 @@ public partial class _Default : Page
 =======
         Session["Userid"] = "1003";
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
+<<<<<<< HEAD
 =======
         Session["Userid"] = "1003";
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
         Session["Userid"] = "1003";
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
+=======
+>>>>>>> parent of dce31fb... Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
     }
 
     protected void BtnTransfer_Click(object sender, EventArgs e)

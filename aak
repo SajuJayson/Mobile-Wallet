@@ -1,0 +1,269 @@
+[33mcommit ec58527e322f21067d388f2d82f00112d7d170d4[m
+Merge: dce31fb 1e59712
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Thu Aug 10 14:40:14 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit dce31fb6bc5b72eb51b5b3314653ca1ab69fee0f[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Thu Aug 10 14:39:21 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 7ef8955755f3677d888daae773d62ef9447e6927[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Thu Aug 10 14:35:07 2017 -0400
+
+    GUI commit
+
+[33mcommit 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Fri Jul 28 08:21:42 2017 -0400
+
+    Release 1.0 - Final Touch Up.
+    
+    Completed Stories - 1,4,5,6
+    Incomplete Stories - 2,3
+
+[33mcommit 1185319952b634f557998e2259cbaa6f217e3522[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Fri Jul 28 07:21:22 2017 -0400
+
+    Stories 4, 5 and 6 - Completed
+    
+    Final Draft for Release 1
+
+[33mcommit 70302caa4c5bc13b04c964ed08d7a8ceae2ba616[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Fri Jul 28 05:02:31 2017 -0400
+
+    Transaction Report Story
+
+[33mcommit f49d8481f41a4e09187b5c4fcee8548e215c669f[m
+Merge: 3ff6c27 820e88f
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Fri Jul 28 04:57:51 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 820e88f3004cec4a30624c202857481b0c52296d[m
+Merge: dc87da3 e73f64b
+Author: Saju Jayson Raju <saju.jayson@gmail.com>
+Date:   Fri Jul 28 04:36:43 2017 -0400
+
+    Merge pull request #4 from SajuJayson/Release-1.0-Final-Touch
+    
+    Release 1 0 final touch
+
+[33mcommit e73f64bbc0a0bc482347f58cb0c372b1b585fee8[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Fri Jul 28 04:33:10 2017 -0400
+
+    Revert "Revert "Story 1 - Complete""
+    
+    This reverts commit 3b4f3c31e14c2c50ef1d74beec1c00494399ac0a.
+
+[33mcommit 3b4f3c31e14c2c50ef1d74beec1c00494399ac0a[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Fri Jul 28 04:32:55 2017 -0400
+
+    Revert "Story 1 - Complete"
+    
+    This reverts commit 75189f75077107072b34c3ec7120d13839837588.
+
+[33mcommit 75189f75077107072b34c3ec7120d13839837588[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Fri Jul 28 04:32:42 2017 -0400
+
+    Story 1 - Complete
+    
+    All acceptance test passed
+
+[33mcommit 3ff6c27059e783bc6c0b66de8e30c9ed7bc1fc0a[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Fri Jul 28 04:20:01 2017 -0400
+
+    Report, Login and some design
+
+[33mcommit dc87da3fa5575d2b2116385b82a8dfa694d1ee68[m
+Merge: efd086e 1c44c4c
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Fri Jul 28 00:05:56 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit efd086e2c8819130bc27384f3be0f27eb83563d3[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Fri Jul 28 00:05:44 2017 -0400
+
+    Transfer using ADO and classes
+    
+    Replaced enitiy framework with ado.net and stored procedures
+
+[33mcommit 1c44c4ce7218ab40aaed4ff8603d84a49ed99667[m
+Author: VictorJ <victorvjda@gmail.com>
+Date:   Thu Jul 27 22:07:11 2017 -0400
+
+    Added Registeration Form Fields
+
+[33mcommit 7f7f507098bbe9fb9cc2fd479bcddd72458edafc[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Thu Jul 27 17:43:07 2017 -0700
+
+    Report
+
+[33mcommit 7622cd7bd98943ad704dbbd80c52e4cea41d7c63[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Thu Jul 27 16:24:52 2017 -0700
+
+    Report
+
+[33mcommit 03fca71964243df45e0d72aabb7f04e89c8d5272[m
+Merge: 3d458d2 300335c
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 20:04:16 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 3d458d251965acae30c210bddba28f199be83d5c[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 20:04:09 2017 -0400
+
+    User Story 1 Error Solved
+
+[33mcommit 300335c4fd66409d66e6404ce735415c1031f595[m
+Merge: eca3740 531fa0b
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 16:43:48 2017 -0700
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit eca374060f3c38a4efb52666a2f0c1dacdc48dab[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 16:43:44 2017 -0700
+
+    calender
+
+[33mcommit 531fa0b7b2885587f154b2a8cc3e5d0dcf4b7d83[m
+Merge: 239cec0 9edb116
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 19:37:06 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 239cec04891c1f256695bf9390d0e0bee39a7492[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 19:34:13 2017 -0400
+
+    UserStory 1 Transfer using Mobile Number or email
+
+[33mcommit 9edb1160b7f709923102c48dcf90575f12632dc5[m
+Merge: 5b06ec6 d39850c
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 15:03:02 2017 -0700
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 5b06ec68d710a0c22ec05bfe18774e72ae2cbef1[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 15:02:57 2017 -0700
+
+    AccountInfoForm
+
+[33mcommit d39850c1113294b4a3604d91e90a368d9bd0af92[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Sun Jul 23 17:42:18 2017 -0400
+
+    Bank Db modified
+
+[33mcommit e17a65eaf83f779d5333c4b1616e411d8ea40e33[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 13:56:44 2017 -0700
+
+    Bank Details
+
+[33mcommit b4090b4ca66cd2bad83ff7c5425fa3558ce489f7[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 13:16:24 2017 -0700
+
+    AcknowledgementForm
+
+[33mcommit 0291e98d8f2b894025f596fce4f9fbe861d8ae67[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Sun Jul 23 15:47:58 2017 -0400
+
+    Error Comment
+
+[33mcommit f38a9350d2f60e2723eb3acde39d15ee4e5c9861[m
+Merge: 09fafc7 b8a6e93
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 12:43:57 2017 -0700
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 09fafc7f655f60f55d0bb927554f6d3252bdc238[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 12:40:03 2017 -0700
+
+    DepositForm
+
+[33mcommit b8a6e9357f13e321c37f84755d71e1c73d170cc2[m
+Merge: 4e4fd55 e11ecf6
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 15:34:46 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 4e4fd55fb8b82fd5b1b68d058dccc066ee1647f9[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 15:34:31 2017 -0400
+
+    new entity
+
+[33mcommit e11ecf6e2012fe45e759ea56d0677533c782eb3f[m
+Author: SajuJayson <saju.jayson@gmail.com>
+Date:   Sun Jul 23 14:31:33 2017 -0400
+
+    Dummy Bank DB
+
+[33mcommit dfa184a59b1483ee7b5696f0a4030e0ba32f9a77[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 11:40:20 2017 -0700
+
+    Default
+
+[33mcommit 3817942e06c4540eb6bbe9dfd815a419b4bae1f5[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 11:29:01 2017 -0700
+
+    BankDetails
+
+[33mcommit ce0b2830b642dbc5e3731832bfc2e1f226f36a9e[m
+Merge: a751969 e1c8918
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 14:07:19 2017 -0400
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit a75196919a0d52b79582be94f4fe6645562edc64[m
+Author: AvishekChauhan <rana.avi.265400@gmail.com>
+Date:   Sun Jul 23 14:05:52 2017 -0400
+
+    BD changes
+
+[33mcommit e1c89180aa817872cf4ddce2501d54ab8af4960a[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 11:04:22 2017 -0700
+
+    ConfirmationForm
+
+[33mcommit 380b0fdf6c095719efdcf1037e3b2febbd2c51bf[m
+Merge: 59b1c5f b6b3584
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.com>
+Date:   Sun Jul 23 09:58:45 2017 -0700
+
+    Merge branch 'master' of https://github.com/SajuJayson/Mobile-Wallet
+
+[33mcommit 59b1c5f56b610e79e382bf921433f5acef1710d1[m
+Author: LovedeepKaur42 <kaurlovedeep108@gmail.co
