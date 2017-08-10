@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+using System.Data;
+>>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
 using System.Data;
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
@@ -17,10 +21,13 @@ public partial class Report : System.Web.UI.Page
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected void Page_Load(object sender, EventArgs e)
     {
 
 =======
+=======
+>>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
     DataBaseHandler cls = new DataBaseHandler();
@@ -46,6 +53,9 @@ public partial class Report : System.Web.UI.Page
         GridView1.DataSource = ds;
         GridView1.DataBind();
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
+=======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
 >>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
@@ -64,7 +74,13 @@ public partial class Report : System.Web.UI.Page
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Response.Redirect("Default.aspx");
+=======
+        object refUrl = ViewState["RefUrl"];
+        if (refUrl != null)
+            Response.Redirect((string)refUrl);
+>>>>>>> 1e59712ebcd767a4a239d4f3d91db27b8ffd4fb3
 =======
         object refUrl = ViewState["RefUrl"];
         if (refUrl != null)
