@@ -29,6 +29,6 @@
         </tr>
         </tr>
     </table>
-    <asp:Button ID="BtnSend" runat="server" Text="Send" OnClick="BtbSend_Click" />   <asp:Label ID="lblMes" runat="server"  ForeColor="Red" />
+    <asp:Button ID="BtnSend" class="button" runat="server" Text="Send" OnClick="BtbSend_Click" />   <asp:Label ID="lblMes" runat="server"  ForeColor="Red" />
 </asp:Content>
 

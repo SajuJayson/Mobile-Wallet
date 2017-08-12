@@ -6,21 +6,22 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - E Wallet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>eWallet Payments</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
@@ -38,57 +39,60 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header" style="font-family: Arial; font-size: medium">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                   
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">E Wallet</a></li>
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                 <li><a runat="server" href="AccountInfo.aspx">Account Info</a></li>
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
+        <div id="container">
+    <header>
+	<div class="width">
+    		<h1><a href="/">eWallet<span>Payments</span></a></h1>
+        	<h2>We Transfer Better!</h2>
+	</div>
+    </header>
+    <nav>
+	<div class="width">
+    		<ul>
+        		<li class="start selected"><a href="Default.aspx">Home</a></li>
+        	    	<li class=""><a href="Default.aspx">Transfers</a></li>
+         	   	<li><a href="#">Deposits</a></li>
+          	  	<li><a href="#">Withdraw</a></li>
+                <li><a href="#">Help</a></li>
+          	 	<li class="end"><a href="#">About Us</a></li>
+        	</ul>
+	</div>
+    </nav>
+    <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <p>
+                    &nbsp;</p>
             </asp:ContentPlaceHolder>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My E Wallet Application</p>
-            </footer>
+                </div>
+    <footer>
+        <div class="footer-content width">
+            <ul>
+            	<li><h4>Transfer</h4></li>
+                <li><a href="#">Business transfer</a></li>                
+                <li><a href="#">First time transfer</a></li>
+                <li><a href="#">Peer to peer transfer</a></li>
+            </ul>            
+            <ul>
+            	<li><h4>Deposit</h4></li>
+                <li><a href="#">Small deposits</a></li>
+                <li><a href="#">First time deposit</a></li>
+                <li><a href="#">Deposits more than $1M</a></li>
+            </ul>
+            
+            <ul class="endfooter">
+            	<li><h4>About Us</h4></li>
+                <li><a href="#">Who we are? </a></li>
+                <li><a href="#">What we do?</a></li>
+                <li><a href="#">Type of payments</a></li>
+            </ul>
+            
+            <div class="clear"></div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; eWallet 2017 <a href="default.aspx">Find easy e-Transfer Solutions</a> by ASLVW</p>
+         </div>
+    </footer>
+</div>
     </form>
 </body>
 </html>
