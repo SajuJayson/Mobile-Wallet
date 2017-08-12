@@ -23,6 +23,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TxtBoxAmount" runat="server"></asp:TextBox>
     <br />
+    <asp:Label ID="LabelStatus" runat="server"></asp:Label>
     <br />
     <br/>
 

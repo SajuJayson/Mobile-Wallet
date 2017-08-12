@@ -4,19 +4,19 @@
     <h1>Bank Details</h1>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Bank Name"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxBankName" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label2" runat="server" Text="Account No"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxAccountNo" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label3" runat="server" Text="First Name"></asp:Label>
-    &nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+    &nbsp;<asp:TextBox ID="TextBoxFName" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label4" runat="server" Text="Last Name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+&nbsp;<asp:TextBox ID="TextBoxLName" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label5" runat="server" Text="Amount"></asp:Label>
@@ -24,7 +24,8 @@
         <asp:TextBox ID="TextBoxAmount" runat="server"></asp:TextBox>
     </p>
     <p>
-        &nbsp;</p>
+        <asp:Label ID="LabelStatus" runat="server"></asp:Label>
+    </p>
     <p>
         <asp:Button ID="BtnNextWithdraw" runat="server" Text="Next" OnClick="BtnNextWithdraw_Click" Width="72px" />
     &nbsp;&nbsp;

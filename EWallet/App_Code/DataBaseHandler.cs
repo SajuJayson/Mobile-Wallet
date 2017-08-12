@@ -30,6 +30,32 @@ public class DataBaseHandler
     }
 
 
+    public int WithdrawMoney(int customerID, int BankAccountNo, double Amount)
+    {
+        conn.Open();
+        //SqlCommand command = new SqlCommand("update transaction set CustomerId='" + SenderID + "', BenificaryID='" + BenificaryID + "', TransactionTime=getdate() Amount='" + Amount.ToString() + "', TransactionType='T'", conn);
+        SqlCommand cmd = new SqlCommand("Withdrawal", conn);
+        cmd.Parameters.Add("@CusId", SqlDbType.Int).Value = customerID;
+        cmd.Parameters.Add("@AccNo", SqlDbType.Int).Value = BankAccountNo;
+        cmd.Parameters.Add("@Amount", SqlDbType.Money, 100).Value = Amount;
+        cmd.CommandType = CommandType.StoredProcedure;
+        int result = cmd.ExecuteNonQuery();
+        return result;
+    }
+
+    public int DepositMoney(int customerID, int BankAccountNo, double Amount)
+    {
+        conn.Open();
+        //SqlCommand command = new SqlCommand("update transaction set CustomerId='" + SenderID + "', BenificaryID='" + BenificaryID + "', TransactionTime=getdate() Amount='" + Amount.ToString() + "', TransactionType='T'", conn);
+        SqlCommand cmd = new SqlCommand("Deposit", conn);
+        cmd.Parameters.Add("@CusId", SqlDbType.Int).Value = customerID;
+        cmd.Parameters.Add("@AccNo", SqlDbType.Int).Value = BankAccountNo;
+        cmd.Parameters.Add("@Amount", SqlDbType.Money, 100).Value = Amount;
+        cmd.CommandType = CommandType.StoredProcedure;
+        int result = cmd.ExecuteNonQuery();
+        return result;
+    }
+
     public DataSet UserDetails(String Customer, int flag)
     {
         SqlCommand cmd = new SqlCommand("GetUserDetail", conn);
@@ -60,6 +86,17 @@ public class DataBaseHandler
         SqlCommand cmd = new SqlCommand("GetUserIDDetails", conn);
         cmd.Parameters.Add("@BenificaryID", SqlDbType.Int, 100).Value = customerid;
             cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+
+    public DataSet checkBankAccNoDetails(int AccountNo)
+    {
+        SqlCommand cmd = new SqlCommand("GetBanckAccountDetails", conn);
+        cmd.Parameters.Add("@AccNo", SqlDbType.Int, 100).Value = AccountNo;
+        cmd.CommandType = CommandType.StoredProcedure;
         SqlDataAdapter adp = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         adp.Fill(ds);

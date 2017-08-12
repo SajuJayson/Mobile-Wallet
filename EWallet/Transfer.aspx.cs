@@ -43,7 +43,7 @@ public partial class Transfer : System.Web.UI.Page
         else
         {
             ds = cls.UserDetails("6475289869", 1);
-            ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt16(RbtnType.SelectedValue));
+            ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt32(RbtnType.SelectedValue));
             if (ds1 == null)
             {
                 lblMes.Text = "Phone/Email Number not found";
@@ -62,7 +62,7 @@ public partial class Transfer : System.Web.UI.Page
                 else
                 {
                     string updatedAmt = Convert.ToString(Convert.ToInt64(balance) - Convert.ToInt64(txtbal.Text));
-                    Response.Redirect("ConfirmationForm.aspx?CustID=" + CustID + "&CurBal=" + balance + "&DeductedAmt=" + txtbal.Text + "&updatedAmt=" + updatedAmt);
+                    Response.Redirect("ConfirmationForm.aspx?Task=1&CustID=" + CustID + "&CurBal=" + balance + "&DeductedAmt=" + txtbal.Text + "&updatedAmt=" + updatedAmt);
                 }
             }
         }
