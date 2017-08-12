@@ -92,6 +92,17 @@ public class DataBaseHandler
         return ds;
     }
 
+    public DataSet checkBankAccNoDetails(int AccountNo)
+    {
+        SqlCommand cmd = new SqlCommand("GetBanckAccountDetails", conn);
+        cmd.Parameters.Add("@AccNo", SqlDbType.Int, 100).Value = AccountNo;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+
     public DataSet CheckUser(string name, string password)
     {
         SqlCommand cmd = new SqlCommand("CheckUser", conn);
