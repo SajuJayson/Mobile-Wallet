@@ -50,13 +50,17 @@
 	<div class="width">
     		<ul>
         		<li class="start selected"><a href="Default.aspx">Home</a></li>
-        	    	<li class=""><a href="Default.aspx">Transfers</a></li>
+        	    <li class=""><a href="Default.aspx">Transfers</a></li>
          	   	<li><a href="#">Deposits</a></li>
           	  	<li><a href="#">Withdraw</a></li>
                 <li><a href="#">Help</a></li>
           	 	<li class="end"><a href="#">About Us</a></li>
+                <li><a href="Login.aspx">LogIn</a></li>
+                <li><a href="Register.aspx">Register</a></li>
         	</ul>
+         
 	</div>
+        
     </nav>
     <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
