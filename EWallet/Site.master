@@ -74,9 +74,9 @@
         <div class="footer-content width">
             <ul>
             	<li><h4>Transfer</h4></li>
-                <li><a href="#">Business transfer</a></li>                
-                <li><a href="#">First time transfer</a></li>
-                <li><a href="#">Peer to peer transfer</a></li>
+                <li><a href="BusinessTransfer.aspx">Business transfer</a></li>                
+                <li><a href="BusinessTransfer.aspx">First time transfer</a></li>
+                <li><a href="BusinessTransfer.aspx">Peer to peer transfer</a></li>
             </ul>            
             <ul>
             	<li><h4>Deposit</h4></li>
