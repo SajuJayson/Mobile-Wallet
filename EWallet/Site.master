@@ -55,8 +55,10 @@
           	  	<li><a href="#">Withdraw</a></li>
                 <li><a href="#">Help</a></li>
           	 	<li class="end"><a href="#">About Us</a></li>
-                <li><a href="Login.aspx">LogIn</a></li>
                 <li><a href="Register.aspx">Register</a></li>
+                <li><a href="Login.aspx">LogIn</a></li>
+                <li><a href="AccountInfo.aspx">Account Details</a></li>
+                
         	</ul>
          
 	</div>
