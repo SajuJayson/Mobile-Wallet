@@ -4,8 +4,7 @@
     <table>
         <tr>
             <td>
-                Type:
-            </td>
+                Type</td>
             <td><asp:RadioButtonList OnCheckedChanged="RBtnChange" OnSelectedIndexChanged="RBtnChange" RepeatDirection="Horizontal" ID="RbtnType" runat="server" >
                 <asp:ListItem Selected="True" Text ="Via Phone" Value="1" />
                 <asp:ListItem Text ="Via Email" Value="2" />
