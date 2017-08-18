@@ -33,7 +33,7 @@ public partial class AccountInfo : System.Web.UI.Page
     {
         if (TextBoxCId.Text.Equals(""))
         {
-            LabelOutput.Text = "Enter a customer Id";
+            //LabelOutput.Text = "Enter a customer Id";
         }
         else
         {

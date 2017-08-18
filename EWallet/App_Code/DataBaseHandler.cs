@@ -114,4 +114,15 @@ public class DataBaseHandler
         adp.Fill(ds);
         return ds;
     }
+    public DataSet RevertTransaction(int ID, int Flag)
+    {
+        SqlCommand cmd = new SqlCommand("RevertTransaction", conn);
+        cmd.Parameters.Add("@ID", SqlDbType.Int, 100).Value = ID;
+        cmd.Parameters.Add("@Flag", SqlDbType.Int, 100).Value = Flag;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
 }
