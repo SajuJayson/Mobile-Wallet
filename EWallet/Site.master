@@ -53,11 +53,11 @@
         	    <li class=""><a href="Transfer.aspx">Transfers</a></li>
          	   	<li><a href="DepositForm.aspx">Deposits</a></li>
           	  	<li><a href="BankDetails.aspx">Withdraw</a></li>
-                <li><a href="#">Help</a></li>
-          	 	<li class="end"><a href="#">About Us</a></li>
                 <li><a href="Register.aspx">Register</a></li>
                 <li><a href="Login.aspx">LogIn</a></li>
                 <li><a href="AccountInfo.aspx">Account Details</a></li>
+                <li><a href="Help.aspx">Help</a></li>
+                <li class="end"><a href="About.aspx">About Us</a></li>
                 
         	</ul>
          
@@ -74,22 +74,22 @@
         <div class="footer-content width">
             <ul>
             	<li><h4>Transfer</h4></li>
-                <li><a href="#">Business transfer</a></li>                
-                <li><a href="#">First time transfer</a></li>
-                <li><a href="#">Peer to peer transfer</a></li>
+                <li><a href="Transfer.aspx">Business transfer</a></li>                
+                <li><a href="Transfer.aspx">First time transfer</a></li>
+                <li><a href="Transfer.aspx">Peer to peer transfer</a></li>
             </ul>            
             <ul>
             	<li><h4>Deposit</h4></li>
-                <li><a href="#">Small deposits</a></li>
-                <li><a href="#">First time deposit</a></li>
-                <li><a href="#">Deposits more than $1M</a></li>
+                <li><a href="DepositForm.aspx">Small deposits</a></li>
+                <li><a href="DepositForm.aspx">First time deposit</a></li>
+                <li><a href="DepositForm.aspx">Deposits more than $1M</a></li>
             </ul>
             
             <ul class="endfooter">
             	<li><h4>About Us</h4></li>
-                <li><a href="#">Who we are? </a></li>
-                <li><a href="#">What we do?</a></li>
-                <li><a href="#">Type of payments</a></li>
+                <li><a href="About.aspx">Who we are? </a></li>
+                <li><a href="About.aspx">What we do?</a></li>
+                <li><a href="About.aspx">Type of payments</a></li>
             </ul>
             
             <div class="clear"></div>
