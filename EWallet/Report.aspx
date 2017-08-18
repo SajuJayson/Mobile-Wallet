@@ -23,7 +23,7 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             <Columns>
-                <asp:TemplateField ShowHeader="False">
+                <asp:TemplateField ShowHeader="False" HeaderText="Action">
                     <ItemTemplate>
                         <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false"  CommandName="revert" Text="Revert"></asp:LinkButton>
                     </ItemTemplate>
