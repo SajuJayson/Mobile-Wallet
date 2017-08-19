@@ -52,15 +52,11 @@
 
         </table>
     <p>
-<<<<<<< HEAD
-        <asp:Button class="button" ID="BtnNextWithdraw" runat="server" Text="Next" OnClick="BtnNextWithdraw_Click" Width="72px" />
-    &nbsp;&nbsp;
-        <asp:Button class="button" ID="BtnBackWithdraw" runat="server" OnClick="BtnBackWithdraw_Click" Text="Back" Width="81px" />
-=======
+
         <asp:Button ID="BtnNextWithdraw"  class="button"  runat="server" Text="Next" OnClick="BtnNextWithdraw_Click" Width="72px" />
     &nbsp;&nbsp;
         <asp:Button ID="BtnBackWithdraw" CssClass="button" runat="server" OnClick="BtnBackWithdraw_Click" Text="Back" Width="81px" />
->>>>>>> 26cafbf7493404765719a59d1660f75c3a1100b5
+
     </p>
 </asp:Content>
 

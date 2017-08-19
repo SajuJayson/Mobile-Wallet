@@ -71,11 +71,9 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-<<<<<<< HEAD
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" class="button" />
-=======
-                <asp:Button ID="RegisterBtn" class="button" runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
->>>>>>> 26cafbf7493404765719a59d1660f75c3a1100b5
+
+                <asp:Button ID="RegisterBtn" class="button" runat="server" OnClick="CreateUser_Click" Text="Register" />
+
             </div>
         </div>
     </div>

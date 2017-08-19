@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : Page
 {
-    int Flags=0;
     protected void Page_Load(object sender, EventArgs e)
     {
         if(!IsPostBack)
@@ -29,7 +28,7 @@ public partial class _Default : Page
                 Label mpLabel = (Label)Master.FindControl("welcome");
                 mpLabel.Text= "Welcome "+ ds.Tables[0].Rows[0]["firstname"];
                 mpLabel.Visible = true;
-                Flags = 1;
+                ViewState["Flags"] = 1;
                 }
 
             }
@@ -38,7 +37,7 @@ public partial class _Default : Page
 
     protected void BtnTransfer_Click(object sender, EventArgs e)
     {
-        if (Flags == 1)
+        if (ViewState["Flags"].ToString() == "1")
             Response.Redirect("Transfer.aspx");
         else
             msg.Text = "Please login to use this feature";
@@ -46,7 +45,7 @@ public partial class _Default : Page
 
     protected void BtnDeposit_Click(object sender, EventArgs e)
     {
-        if (Flags == 1)
+        if (ViewState["Flags"].ToString() == "1")
             Response.Redirect("DepositForm.aspx");
         else
             msg.Text = "Please login to use this feature";
@@ -54,7 +53,7 @@ public partial class _Default : Page
 
     protected void BtnWithdraw_Click(object sender, EventArgs e)
     {
-        if (Flags == 1)
+        if (ViewState["Flags"].ToString() == "1")
             Response.Redirect("BankDetails.aspx");
         else
             msg.Text = "Please login to use this feature";
