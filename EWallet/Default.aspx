@@ -17,7 +17,9 @@
             <td style="width:200px"><asp:Button ID="BtnDeposit" Font-Bold="True" Font-Size="XX-Large" style=" font-size:larger; background-image:url('image/deposit.jpg'); background-size:cover; cursor:hand;" Width="200px" Height="200px"  runat="server" Text="Deposit " OnClick="BtnDeposit_Click" /></td>
             <td style="width:200px"><asp:Button ID="BtnWithdraw" Font-Bold="True" Font-Size="XX-Large" style=" font-size:larger; background-image:url('image/withdraw.jpg'); background-size:cover; cursor:hand;" Width="200px" Height="200px"  runat="server" Text="Withdraw" OnClick="BtnWithdraw_Click" /></td>
                </tr></table>
-            
+            <center>
+            <asp:Label ID="msg" ForeColor="Red" runat="server" />
+                </center>
     </div>
 
 </asp:Content>

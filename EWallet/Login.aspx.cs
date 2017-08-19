@@ -10,8 +10,12 @@ public partial class Account_Login : Page
 {
         protected void Page_Load(object sender, EventArgs e)
         {
+        if (Request.QueryString["logout"] != null)
+            { Session.Abandon();
+            Session.Clear();
+        }
             RegisterHyperLink.NavigateUrl = "Register";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
+            //OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
             var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
             if (!String.IsNullOrEmpty(returnUrl))
             {
@@ -28,6 +32,7 @@ public partial class Account_Login : Page
             ds=cls.CheckUser(UserName.Text, Password.Text);
                 if (ds != null)
                 {
+                    Session["UserInfo"] = ds;
                     Response.Redirect("Default.aspx");
                 }
                 else

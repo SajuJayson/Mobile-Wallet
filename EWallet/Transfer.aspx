@@ -5,10 +5,11 @@
         <tr>
             <td>
                 Type</td>
-            <td><asp:RadioButtonList OnCheckedChanged="RBtnChange" OnSelectedIndexChanged="RBtnChange" RepeatDirection="Horizontal" ID="RbtnType" runat="server" >
+            <td><asp:RadioButtonList Autopostback = "true"  OnSelectedIndexChanged="RBtnChange1"  RepeatDirection="Horizontal" ID="RbtnType1" runat="server" >
                 <asp:ListItem Selected="True" Text ="Via Phone" Value="1" />
                 <asp:ListItem Text ="Via Email" Value="2" />
-                </asp:RadioButtonList>                
+                </asp:RadioButtonList> 
+                               
             </td>
         </tr>
         <tr>

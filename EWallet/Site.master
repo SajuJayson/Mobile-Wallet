@@ -53,19 +53,23 @@
         	    <li class=""><a href="Transfer.aspx">Transfers</a></li>
          	   	<li><a href="DepositForm.aspx">Deposits</a></li>
           	  	<li><a href="BankDetails.aspx">Withdraw</a></li>
-                <li><a href="Register.aspx">Register</a></li>
-                <li><a href="Login.aspx">LogIn</a></li>
+                <li><a id="Register" runat="server" href="Register.aspx">Register</a></li>
+                <li><a id="login" runat="server" href="Login.aspx">LogIn</a></li>
                 <li><a href="AccountInfo.aspx">Account Details</a></li>
                 <li><a href="Help.aspx">Help</a></li>
                 <li class="end"><a href="About.aspx">About Us</a></li>
+                <li><a id="Logout" visible="false" runat="server" href="Login.aspx?logout=1">Log Out</a></li>
                 
         	</ul>
          
 	</div>
         
     </nav>
+          
     <div class="container body-content">
+         <div style="width:100%"> <asp:Label ID="welcome" Font-Bold="true"  ForeColor="Green" Font-Size="Larger" runat="server" Text="" Visible="false" /></div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
                 <p>
                     &nbsp;</p>
             </asp:ContentPlaceHolder>

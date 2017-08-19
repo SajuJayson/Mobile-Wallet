@@ -68,7 +68,22 @@ public class DataBaseHandler
         return ds;
     }
 
-
+    public DataSet AddUser(String FirstName, String LastName, String Email, String Phone, String UserName, String Password)
+    {
+        SqlCommand cmd = new SqlCommand("AddUser", conn);
+        cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 100).Value = FirstName;
+        cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 100).Value = LastName;
+        cmd.Parameters.Add("@Email", SqlDbType.VarChar, 100).Value = Email;
+        cmd.Parameters.Add("@Phone", SqlDbType.VarChar, 100).Value = Phone;
+        cmd.Parameters.Add("@UserName", SqlDbType.VarChar, 100).Value = UserName;
+        cmd.Parameters.Add("@Password", SqlDbType.VarChar, 100).Value = Password;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+    
     public DataSet ShowTransactions(int roll, int customerid)
     {
         SqlCommand cmd = new SqlCommand("GetReport", conn);
@@ -119,6 +134,21 @@ public class DataBaseHandler
         SqlCommand cmd = new SqlCommand("RevertTransaction", conn);
         cmd.Parameters.Add("@ID", SqlDbType.Int, 100).Value = ID;
         cmd.Parameters.Add("@Flag", SqlDbType.Int, 100).Value = Flag;
+        cmd.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        adp.Fill(ds);
+        return ds;
+    }
+
+    public DataSet UpdateCustomerData(string FirstName,string LastName, string Email, string Phone,int id)
+    {
+        SqlCommand cmd = new SqlCommand("UpdateCustomerData", conn);
+        cmd.Parameters.Add("@ID", SqlDbType.Int, 100).Value = id;
+        cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 100).Value = FirstName;
+        cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 100).Value = LastName;
+        cmd.Parameters.Add("@Email", SqlDbType.VarChar, 100).Value = Email;
+        cmd.Parameters.Add("@Phone", SqlDbType.VarChar, 100).Value = Phone;
         cmd.CommandType = CommandType.StoredProcedure;
         SqlDataAdapter adp = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();

@@ -14,10 +14,32 @@ public partial class DepositForm : System.Web.UI.Page
     int CustId = 1003;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
-        {
-            Calendar1.Visible =false;
-        }
+        if (!IsPostBack)
+            if (Session["UserInfo"] != null)
+            {
+                DataSet ds = new DataSet();
+                ds = Session["UserInfo"] as DataSet;
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Session["Userid"] = ds.Tables[0].Rows[0]["CustomerID"];
+                    Control c = this.Master.FindControl("login");// "masterDiv"= the Id of the div.
+                    c.Visible = false;
+                    c = this.Master.FindControl("Register");// "masterDiv"= the Id of the div.
+                    c.Visible = false;
+                    c = this.Master.FindControl("LogOut");// "masterDiv"= the Id of the div.
+                    c.Visible = true;
+                    Label mpLabel = (Label)Master.FindControl("welcome");
+                    mpLabel.Text = "Welcome " + ds.Tables[0].Rows[0]["firstname"];
+                    mpLabel.Visible = true;
+                    //Flag = 1;
+                    Calendar1.Visible = false;
+                }
+                else
+                    Response.Redirect("login.aspx");
+
+            }
+            else
+                Response.Redirect("login.aspx");
     }
 
     protected void BtnConfirmDeposit_Click(object sender, EventArgs e)

@@ -14,17 +14,42 @@ public partial class Transfer : System.Web.UI.Page
     DataSet ds1 = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+            if (Session["UserInfo"] != null)
+            {
+                DataSet ds = new DataSet();
+                ds = Session["UserInfo"] as DataSet;
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Session["Userid"] = ds.Tables[0].Rows[0]["CustomerID"];
+                    Control c = this.Master.FindControl("login");// "masterDiv"= the Id of the div.
+                    c.Visible = false;
+                    c = this.Master.FindControl("Register");// "masterDiv"= the Id of the div.
+                    c.Visible = false;
+                    c = this.Master.FindControl("LogOut");// "masterDiv"= the Id of the div.
+                    c.Visible = true;
+                    Label mpLabel = (Label)Master.FindControl("welcome");
+                    mpLabel.Text = "Welcome " + ds.Tables[0].Rows[0]["firstname"];
+                    mpLabel.Visible = true;
+                    //Flag = 1;
+                    
+                }
+                else
+                    Response.Redirect("login.aspx");
 
+            }
+            else
+                Response.Redirect("login.aspx");
     }
     Regex reg;// = new Regex (@"\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*");
     protected void BtbSend_Click(object sender, EventArgs e)
     {
-        if (RbtnType.SelectedValue == "2")
+        if (RbtnType1.SelectedValue == "2")
         {
             reg = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
             lbltype.Text = "Email ID";
         }
-        else if (RbtnType.SelectedValue == "1")
+        else if (RbtnType1.SelectedValue == "1")
         {
             reg = new Regex(@"\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*");
             lbltype.Text = "Phone Number";
@@ -43,7 +68,7 @@ public partial class Transfer : System.Web.UI.Page
         else
         {
             ds = cls.UserDetails("6475289869", 1);
-            ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt32(RbtnType.SelectedValue));
+            ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt32(RbtnType1.SelectedValue));
             if (ds1 == null)
             {
                 lblMes.Text = "Phone/Email Number not found";
@@ -69,14 +94,14 @@ public partial class Transfer : System.Web.UI.Page
 
     }
 
-    protected void RBtnChange(object sender, EventArgs e)
+    protected void RBtnChange1(object sender, EventArgs e)
     {
-        if (RbtnType.SelectedValue == "2")
+        if (RbtnType1.SelectedValue == "2")
         {
             reg = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
             lbltype.Text = "Email ID";
         }
-        else if (RbtnType.SelectedValue == "1")
+        else if (RbtnType1.SelectedValue == "1")
         {
             reg = new Regex(@"\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*");
             lbltype.Text = "Phone Number";

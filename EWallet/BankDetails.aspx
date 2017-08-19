@@ -27,9 +27,9 @@
         <asp:Label ID="LabelStatus" runat="server"></asp:Label>
     </p>
     <p>
-        <asp:Button ID="BtnNextWithdraw" runat="server" Text="Next" OnClick="BtnNextWithdraw_Click" Width="72px" />
+        <asp:Button class="button" ID="BtnNextWithdraw" runat="server" Text="Next" OnClick="BtnNextWithdraw_Click" Width="72px" />
     &nbsp;&nbsp;
-        <asp:Button ID="BtnBackWithdraw" runat="server" OnClick="BtnBackWithdraw_Click" Text="Back" Width="81px" />
+        <asp:Button class="button" ID="BtnBackWithdraw" runat="server" OnClick="BtnBackWithdraw_Click" Text="Back" Width="81px" />
     </p>
 </asp:Content>
 
