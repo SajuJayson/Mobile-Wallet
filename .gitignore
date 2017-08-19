@@ -49,3 +49,7 @@ EWallet/App_Data/eWallet.mdf
 EWallet/App_Data/eWallet.mdf
 EWallet/ConfirmationForm.aspx
 EWallet/App_Data/eWallet_Log.ldf
+*.ldf
+*.mdf
+*.aspx
+*.aspx

@@ -41,7 +41,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                             <asp:Button runat="server" class="button"  OnClick="LogIn" Text="Log in" />
+=======
+                            <asp:Button ID="LogInBtn" class="button" runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+>>>>>>> 26cafbf7493404765719a59d1660f75c3a1100b5
                         </div>
                     </div>
                 </div>
