@@ -11,7 +11,7 @@ public partial class DepositForm : System.Web.UI.Page
     DataBaseHandler cls = new DataBaseHandler();
     DataSet ds = new DataSet();
     DataSet ds1 = new DataSet();
-    int CustId = 1003;
+   static int CustId ;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -22,6 +22,7 @@ public partial class DepositForm : System.Web.UI.Page
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     Session["Userid"] = ds.Tables[0].Rows[0]["CustomerID"];
+                    CustId = Convert.ToInt32(ds.Tables[0].Rows[0]["CustomerID"]);
                     Control c = this.Master.FindControl("login");// "masterDiv"= the Id of the div.
                     c.Visible = false;
                     c = this.Master.FindControl("Register");// "masterDiv"= the Id of the div.
@@ -45,9 +46,9 @@ public partial class DepositForm : System.Web.UI.Page
     protected void BtnConfirmDeposit_Click(object sender, EventArgs e)
     {
         ds = cls.checkBankAccNoDetails(Convert.ToInt32( TxtBoxCcNo.Text));
-        if (ds == null)
+        if (ds.Tables[0].Rows.Count == 0)
         {
-            LabelStatus.Text = "Please Enter Correct Bank Account No";
+            Label6.Text = "Please Enter Correct Bank Account No";
         }
         else
         {
@@ -55,8 +56,8 @@ public partial class DepositForm : System.Web.UI.Page
             int balance = Convert.ToInt32(ds1.Tables[0].Rows[0]["Balance"]);
 
             
-                int updatedAmt = balance - Convert.ToInt32(TxtBoxAmount.Text);
-                Response.Redirect($"ConfirmationForm.aspx?Task=3&CustID={CustId}&CurBal={balance}&DeductedAmt={"-"+TxtBoxAmount.Text}&updatedAmt={updatedAmt}&BankAccNo={TxtBoxCcNo.Text}");
+                int updatedAmt = balance + Convert.ToInt32(TxtBoxAmount.Text);
+                Response.Redirect($"ConfirmationForm.aspx?Task=3&CustID={CustId}&CurBal={balance}&DeductedAmt={TxtBoxAmount.Text}&updatedAmt={updatedAmt}&BankAccNo={TxtBoxCcNo.Text}");
 
             
 

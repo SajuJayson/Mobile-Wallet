@@ -62,7 +62,9 @@
         <tr>
             <asp:Label ID="LabelStatus" runat="server"></asp:Label>
         </tr>
-         </table><br/>
+         </table>
+     <asp:Label ID="Label6" runat="server"></asp:Label>
+     <br/>
         
            <asp:Button ID="BtnNext" class="button" runat="server" Text="Next" Height="32px" OnClick="BtnConfirmDeposit_Click" Width="83px" />
         

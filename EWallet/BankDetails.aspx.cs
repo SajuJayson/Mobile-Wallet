@@ -11,7 +11,7 @@ public partial class BankDetails : System.Web.UI.Page
     DataBaseHandler cls = new DataBaseHandler();
     DataSet ds = new DataSet();
     DataSet ds1 = new DataSet();
-    int CustId = 1003;
+    static int CustId ;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -22,6 +22,7 @@ public partial class BankDetails : System.Web.UI.Page
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     Session["Userid"] = ds.Tables[0].Rows[0]["CustomerID"];
+                    CustId = Convert.ToInt32(ds.Tables[0].Rows[0]["CustomerID"]);
                     Control c = this.Master.FindControl("login");// "masterDiv"= the Id of the div.
                     c.Visible = false;
                     c = this.Master.FindControl("Register");// "masterDiv"= the Id of the div.
@@ -45,7 +46,7 @@ public partial class BankDetails : System.Web.UI.Page
     protected void BtnNextWithdraw_Click(object sender, EventArgs e)
     {
         ds = cls.checkBankAccNoDetails(Convert.ToInt32(TextBoxAccountNo.Text));
-        if(ds == null)
+        if(ds.Tables[0].Rows.Count == 0)
         {
             LabelStatus.Text = "Please Enter Correct Bank Account No";
         }
