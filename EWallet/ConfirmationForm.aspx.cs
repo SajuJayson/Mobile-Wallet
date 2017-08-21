@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,11 +25,11 @@ public partial class ConfirmationForm : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         DataBaseHandler cls = new DataBaseHandler();
-        //Convert.ToInt16(Session["Userid"])
+        
 
         if("1"==Request.QueryString["Task"])
         {
-            int result = cls.TransferMoney(1003, Convert.ToInt32(Request.QueryString["CustID"]), Convert.ToDouble(Request.QueryString["DeductedAmt"]));
+            int result = cls.TransferMoney(Convert.ToInt16(Session["Userid"]), Convert.ToInt32(Request.QueryString["CustID"]), Convert.ToDouble(Request.QueryString["DeductedAmt"]));
             if (result == 0)
             {
                 Response.Redirect("AcknowledgementForm.aspx?RemBal=" + Request.QueryString["updatedAmt"] + "&CustID=" + Request.QueryString["CustID"] + "&Status=Fail");

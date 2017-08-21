@@ -30,7 +30,7 @@ public partial class Account_Login : Page
             DataSet ds = new DataSet();
             DataBaseHandler cls = new DataBaseHandler();
             ds=cls.CheckUser(UserName.Text, Password.Text);
-                if (ds != null)
+                if (ds.Tables[0].Rows.Count>0)
                 {
                     Session["UserInfo"] = ds;
                     Response.Redirect("Default.aspx");

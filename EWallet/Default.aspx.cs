@@ -11,7 +11,8 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
+        //ViewState["Flags"] = 0;
+        //if (!IsPostBack)
             if(Session["UserInfo"] !=null)
             { 
                 DataSet ds = new DataSet();
@@ -37,7 +38,7 @@ public partial class _Default : Page
 
     protected void BtnTransfer_Click(object sender, EventArgs e)
     {
-        if (ViewState["Flags"].ToString() == "1")
+        if (ViewState["Flags"]!= null)
             Response.Redirect("Transfer.aspx");
         else
             msg.Text = "Please login to use this feature";

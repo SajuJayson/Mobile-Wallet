@@ -72,8 +72,11 @@ public partial class Report : System.Web.UI.Page
         if (e.CommandName == "revert")
         {
             GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
-            int ID=Convert.ToInt16( GridView1.Rows[gvr.RowIndex].Cells[8].Text);           
-
+            int ID=Convert.ToInt16( GridView1.Rows[gvr.RowIndex].Cells[8].Text);
+            cls.RevertTransaction(ID, 1);
+            ds1 = cls.ShowTransactions(1, 0);
+            GridView1.DataSource = ds1;
+            GridView1.DataBind();
         }
     }
 }

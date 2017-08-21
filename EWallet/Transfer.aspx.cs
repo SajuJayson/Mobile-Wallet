@@ -12,16 +12,17 @@ public partial class Transfer : System.Web.UI.Page
     DataBaseHandler cls = new DataBaseHandler();
     DataSet ds = new DataSet();
     DataSet ds1 = new DataSet();
+    DataSet UserData = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+       // if (!IsPostBack)
             if (Session["UserInfo"] != null)
             {
-                DataSet ds = new DataSet();
-                ds = Session["UserInfo"] as DataSet;
-                if (ds.Tables[0].Rows.Count > 0)
+
+                UserData = Session["UserInfo"] as DataSet;
+                if (UserData.Tables[0].Rows.Count > 0)
                 {
-                    Session["Userid"] = ds.Tables[0].Rows[0]["CustomerID"];
+                    Session["Userid"] = UserData.Tables[0].Rows[0]["CustomerID"];
                     Control c = this.Master.FindControl("login");// "masterDiv"= the Id of the div.
                     c.Visible = false;
                     c = this.Master.FindControl("Register");// "masterDiv"= the Id of the div.
@@ -29,7 +30,7 @@ public partial class Transfer : System.Web.UI.Page
                     c = this.Master.FindControl("LogOut");// "masterDiv"= the Id of the div.
                     c.Visible = true;
                     Label mpLabel = (Label)Master.FindControl("welcome");
-                    mpLabel.Text = "Welcome " + ds.Tables[0].Rows[0]["firstname"];
+                    mpLabel.Text = "Welcome " + UserData.Tables[0].Rows[0]["firstname"];
                     mpLabel.Visible = true;
                     //Flag = 1;
                     
@@ -67,7 +68,7 @@ public partial class Transfer : System.Web.UI.Page
         }
         else
         {
-            ds = cls.UserDetails("6475289869", 1);
+            ds = cls.UserDetails(UserData.Tables[0].Rows[0]["phone"].ToString(), 1);
             ds1 = cls.UserDetails(txtphonemail.Text, Convert.ToInt32(RbtnType1.SelectedValue));
             if (ds1 == null)
             {
@@ -76,7 +77,7 @@ public partial class Transfer : System.Web.UI.Page
             }
             else
             {
-                string balance = ds.Tables[0].Rows[0]["Balance"].ToString();
+                string balance =ds.Tables[0].Rows[0]["Balance"].ToString();
                 string CustID = ds1.Tables[0].Rows[0]["CustomerID"].ToString();
             
          
